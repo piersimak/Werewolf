@@ -16,17 +16,14 @@
 
 package com.linecorp.bot.model.event;
 
-import java.util.List;
-
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import java.util.List;
 
 @lombok.Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@NoArgsConstructor
-@AllArgsConstructor
 public class SendingMultipleMessagesRequest implements EventRequest {
     public static final int TO_TYPE_USER = 1;
 
@@ -50,4 +47,15 @@ public class SendingMultipleMessagesRequest implements EventRequest {
      */
     private SendingMultipleMessagesRequestContent content;
 
+    @JsonCreator
+    public SendingMultipleMessagesRequest(
+            @JsonProperty("to") List<String> to,
+            @JsonProperty("toChannel") long toChannel,
+            @JsonProperty("eventType") String eventType,
+            @JsonProperty("content") SendingMultipleMessagesRequestContent content) {
+        this.to = to;
+        this.toChannel = toChannel;
+        this.eventType = eventType;
+        this.content = content;
+    }
 }
