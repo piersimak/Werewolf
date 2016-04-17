@@ -7,9 +7,9 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class StateHandler implements Handler {
+public class StateHandler implements TextContentHandler {
     @Autowired
-    private Handler handler;
+    private TextContentHandler handler;
     @Getter
     @Setter
     private String state;
@@ -18,7 +18,8 @@ public class StateHandler implements Handler {
 
     @Override
     public HandlerResponse told(TextContent textContent) throws LineBotAPIException {
-        String state = kvs.load(getClass(), textContent.getFrom());
+        String state = kvs.load(getClass().getPackage(),
+                textContent.getFrom());
         if (state == null) {
             state = "initial";
         }

@@ -1,6 +1,6 @@
 package com.example.bot.pluggable.genge.controller;
 
-import com.example.bot.pluggable.genge.handler.Handler;
+import com.example.bot.pluggable.genge.handler.TextContentHandler;
 import com.example.bot.pluggable.genge.handler.HandlerResponse;
 import com.linecorp.bot.client.exception.LineBotAPIException;
 import com.linecorp.bot.model.callback.Message;
@@ -18,7 +18,7 @@ import java.util.List;
 @Slf4j
 public class GengeController {
     @Autowired
-    private List<Handler> handlers;
+    private List<TextContentHandler> handlers;
 
     @RequestMapping("/callback")
     public void callback(@LineBotMessages List<Message> messages) throws LineBotAPIException {
@@ -30,7 +30,7 @@ public class GengeController {
     private void handle(Message message) throws LineBotAPIException {
         Content content = message.getContent();
         if (content instanceof TextContent) {
-            for (Handler handler : handlers) {
+            for (TextContentHandler handler : handlers) {
                 HandlerResponse told = handler.told((TextContent) content);
                 if (told == HandlerResponse.OK) {
                     return;

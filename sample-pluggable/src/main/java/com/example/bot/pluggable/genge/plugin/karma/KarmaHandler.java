@@ -1,5 +1,7 @@
-package com.example.bot.pluggable.genge.handler;
+package com.example.bot.pluggable.genge.plugin.karma;
 
+import com.example.bot.pluggable.genge.handler.TextContentHandler;
+import com.example.bot.pluggable.genge.handler.HandlerResponse;
 import com.example.bot.pluggable.genge.storage.KeyValueStorage;
 import com.linecorp.bot.client.LineBotClient;
 import com.linecorp.bot.client.exception.LineBotAPIException;
@@ -9,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class KarmaHandler implements Handler {
+public class KarmaHandler implements TextContentHandler {
     @Autowired
     private LineBotClient lineBotClient;
     @Autowired
@@ -30,7 +32,7 @@ public class KarmaHandler implements Handler {
         String type = matcher.group(2);
 
         Integer retval = keyValueStorage.compute(
-                this.getClass(),
+                this.getClass().getPackage(),
                 name,
                 ( key,  current) -> {
                     if (current == null) {

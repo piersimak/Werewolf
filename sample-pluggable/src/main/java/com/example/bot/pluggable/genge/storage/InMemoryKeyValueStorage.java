@@ -11,19 +11,19 @@ public class InMemoryKeyValueStorage<V> implements KeyValueStorage<V> {
     }
 
     @Override
-    public void save(Class<?> klass, String key, V i) {
-        this.storage.put(klass.getCanonicalName() + "#" + key, i);
+    public void save(Package pkg, String key, V i) {
+        this.storage.put(pkg.getName() + "#" + key, i);
     }
 
     @Override
-    public V load(Class<?> klass, String key) {
-        return this.storage.get(klass.getCanonicalName() + "#" + key);
+    public V load(Package pkg, String key) {
+        return this.storage.get(pkg.getName() + "#" + key);
     }
 
     @Override
-    public V compute(Class<?> klass, String key,
+    public V compute(Package pkg, String key,
                      BiFunction<? super String, ? super V, ? extends V> remappingFunction) {
-        return this.storage.compute(klass.getCanonicalName() + "#" + key,
+        return this.storage.compute(pkg.getName() + "#" + key,
                 remappingFunction);
     }
 }
