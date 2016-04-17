@@ -14,7 +14,7 @@
  * under the License.
  */
 
-package com.example.bot.spring.echo;
+package com.example.bot.pluggable;
 
 import java.util.List;
 
