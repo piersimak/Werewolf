@@ -390,16 +390,6 @@ public class KitchenSinkController {
                                 new MessageAction("Say message",
                                                   "Rice=米"),
                                 new MessageAction("Say message",
-                                                  "Rice=米"),
-                                new MessageAction("Say message",
-                                                  "Rice=米"),
-                                new MessageAction("Say message",
-                                                  "Rice=米"),
-                                new MessageAction("Say message",
-                                                  "Rice=米"),
-                                new MessageAction("Say message",
-                                                  "Rice=米"),
-                                new MessageAction("Say message",
                                                   "Rice=米")
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("Button alt text", buttonsTemplate);
