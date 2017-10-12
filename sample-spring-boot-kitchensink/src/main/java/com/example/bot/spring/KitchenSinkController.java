@@ -376,6 +376,19 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
+            case "/menu": {
+                String imageUrl = createUri("/static/buttons/1040.jpg");
+                ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
+                        "My button sample",
+                        "Hello, my button",
+                        Arrays.asList(
+                                new MessageAction("Say message",
+                                                  "Rice=米")
+                        ));
+                TemplateMessage templateMessage = new TemplateMessage("Button alt text", buttonsTemplate);
+                this.reply(replyToken, templateMessage);
+                break;
+            }
             case "imagemap":
                 this.reply(replyToken, new ImagemapMessage(
                         createUri("/static/rich"),
