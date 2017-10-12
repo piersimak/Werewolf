@@ -380,17 +380,17 @@ public class KitchenSinkController {
                 String imageUrl = createUri("/static/buttons/1040.jpg");
                 ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
                         null,
-                        "My button sample",
-                        "Hello, my button",
+                        null,
+                        "Menu",
                         Arrays.asList(
-                                new MessageAction("Say message",
-                                                  "Rice=米"),
-                                new MessageAction("Say message",
-                                                  "Rice=米"),
-                                new MessageAction("Say message",
-                                                  "Rice=米"),
-                                new MessageAction("Say message",
-                                                  "Rice=米")
+                                new MessageAction("Buat Game",
+                                                  "/creategame"),
+                                new MessageAction("Bantuan",
+                                                  "/help"),
+                                new MessageAction("Daftarperan",
+                                                  "/roles"),
+                                new MessageAction("Pemain",
+                                                  "/players")
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("Button alt text", buttonsTemplate);
                 this.reply(replyToken, templateMessage);
