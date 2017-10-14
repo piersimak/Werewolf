@@ -392,7 +392,7 @@ public class KitchenSinkController {
                                 new MessageAction("Pemain",
                                                   "/players")
                         ));
-                TemplateMessage templateMessage = new TemplateMessage("Button alt text", buttonsTemplate);
+                TemplateMessage templateMessage = new TemplateMessage("Menu", buttonsTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
             }
@@ -405,12 +405,38 @@ public class KitchenSinkController {
                         "Game telah dibuat, silahkan bergabung",
                         Arrays.asList(
                                 new MessageAction("Bergabung",
-                                                  "/gabung")
+                                                  "/join")
                         ));
-                TemplateMessage templateMessage = new TemplateMessage("Button alt text", buttonsTemplate);
+                TemplateMessage templateMessage = new TemplateMessage("Game telah dibuat, silahkan bergabung", buttonsTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
             }
+            case "/join": {
+                //
+                String userId = event.getSource().getUserId();
+                if (userId != null) {
+                    lineMessagingClient
+                            .getProfile(userId)
+                            .whenComplete((profile, throwable) -> {
+                                if (throwable != null) {
+                                    this.replyText(replyToken, throwable.getMessage());
+                                    return;
+                                }
+
+                                this.reply(
+                                        replyToken,
+                                        Arrays.asList(new TextMessage(
+                                                              profile.getDisplayName()+" telah bergabung."
+                                                              ))
+                                );
+
+                            });
+                } else {
+                    this.replyText(replyToken, "Bot can't use profile API without user ID");
+                }
+              //
+            }
+
 
 
 
@@ -449,11 +475,11 @@ public class KitchenSinkController {
                 ));
                 break;
             default:
-                log.info("Returns echo message {}: {}", replyToken, text);
-                this.replyText(
-                        replyToken,
-                        text
-                );
+                //log.info("Returns echo message {}: {}", replyToken, text);
+                //this.replyText(
+                //        replyToken,
+                //        text
+                //);
                 break;
         }
     }
