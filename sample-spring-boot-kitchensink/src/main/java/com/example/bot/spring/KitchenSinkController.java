@@ -412,7 +412,7 @@ public class KitchenSinkController {
                 break;
             }
             case "/join": {
-                //
+
                 String userId = event.getSource().getUserId();
                 if (userId != null) {
                     lineMessagingClient
@@ -426,20 +426,15 @@ public class KitchenSinkController {
                                 this.reply(
                                         replyToken,
                                         Arrays.asList(new TextMessage(
-                                                              profile.getDisplayName()+" telah bergabung."
-                                                              ))
+                                                               profile.getDisplayName() + " telah bergabung."))
                                 );
 
                             });
                 } else {
                     this.replyText(replyToken, "Bot can't use profile API without user ID");
                 }
-              //
+                break;
             }
-
-
-
-
 
             case "imagemap":
                 this.reply(replyToken, new ImagemapMessage(
