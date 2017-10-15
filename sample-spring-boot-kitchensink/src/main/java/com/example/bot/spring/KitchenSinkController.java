@@ -400,8 +400,7 @@ public class KitchenSinkController {
             //RESPON Menu
             case "/creategame": {
 
-                List list1 = Arrays.asList(new MessageAction("Bergabung",
-                                  "/join"));
+                String gg = "asdasd";
 
                 String imageUrl = createUri("/static/buttons/1040.jpg");
                 ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
