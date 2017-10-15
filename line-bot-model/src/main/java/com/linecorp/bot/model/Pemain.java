@@ -12,8 +12,6 @@ import lombok.Value;
 /**
  * Send messages to users, groups, and rooms at any time.
  */
-@Value
-@AllArgsConstructor
 public class Pemain {
     /**
      * ID of the receiver
