@@ -16,8 +16,8 @@
 
 package com.linecorp.bot.model;
 
-import lombok.Data;
+import java.util.ArrayList;
 
 public class tespemain {
-
+    public List<String> tesstring = new ArrayList<String>();
 }
