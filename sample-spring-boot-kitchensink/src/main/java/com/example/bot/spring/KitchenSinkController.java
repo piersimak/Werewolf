@@ -400,8 +400,8 @@ public class KitchenSinkController {
             //RESPON Menu
             case "/creategame": {
 
-                String[] anArray;
-                anArray = new String[10];
+                //String[] anArray;
+                //anArray = new String[10];
 
                 String imageUrl = createUri("/static/buttons/1040.jpg");
                 ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
