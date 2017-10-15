@@ -399,7 +399,7 @@ public class KitchenSinkController {
             }
             //RESPON Menu
             case "/creategame": {
-                List<String> tesstring = new ArrayList<String>();
+                //List<String> tesstring = new ArrayList<String>();
                 String imageUrl = createUri("/static/buttons/1040.jpg");
                 ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
                         null,
