@@ -5,6 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 public class DaftarPemain {
 
-    public static List<Pemain> daftarPemain = new ArrayList<Pemain>();
+    public List<Pemain> daftarPemain = new ArrayList<Pemain>();
 
 }

@@ -16,8 +16,8 @@ public class Pemain {
     /**
      * ID of the receiver
      */
-    private final String nama;
-    private final String id;
+    private String nama;
+    private String id;
     /**
      * List of Message objects.<br>
      * Max: 5
