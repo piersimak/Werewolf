@@ -33,16 +33,16 @@ public class Pemain {
     /**
      * ID of the receiver
      */
-    private final String to;
+    private final String name;
 
     /**
      * List of Message objects.<br>
      * Max: 5
      */
-    private final List<Message> messages;
+    private final String id;
 
-    public Pemain(String to, Message message) {
-        this.to = to;
-        this.messages = Collections.singletonList(message);
+    public Pemain(String name, String id) {
+        this.name = name;
+        this.id = id;
     }
 }
