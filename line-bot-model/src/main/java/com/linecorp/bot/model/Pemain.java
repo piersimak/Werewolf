@@ -29,7 +29,7 @@ import lombok.Value;
  */
 @Value
 @AllArgsConstructor
-public class PushMessage2 {
+public class Pemain {
     /**
      * ID of the receiver
      */
@@ -41,7 +41,7 @@ public class PushMessage2 {
      */
     private final List<Message> messages;
 
-    public PushMessage2(String to, Message message) {
+    public Pemain(String to, Message message) {
         this.to = to;
         this.messages = Collections.singletonList(message);
     }
