@@ -400,7 +400,7 @@ public class KitchenSinkController {
             //RESPON Menu
             case "/creategame": {
 
-                String a[] = new String[]{"abc","klm","xyz","pqr"};
+                List list1 = Arrays.asList("tes");
 
                 String imageUrl = createUri("/static/buttons/1040.jpg");
                 ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
