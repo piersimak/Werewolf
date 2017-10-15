@@ -33,16 +33,16 @@ public class Pemain {
     /**
      * ID of the receiver
      */
-    private final String name;
+    private final String pemainname;
 
     /**
      * List of Message objects.<br>
      * Max: 5
      */
-    private final String id;
+    private final String pemainid;
 
-    public Pemain(String name, String id) {
-        this.name = name;
-        this.id = id;
+    public Pemain(String pemainname, String pemainid) {
+        this.pemainname = pemainname;
+        this.pemainid = pemainid;
     }
 }
