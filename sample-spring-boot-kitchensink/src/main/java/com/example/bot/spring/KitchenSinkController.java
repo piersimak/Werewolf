@@ -423,9 +423,9 @@ public class KitchenSinkController {
                                     this.replyText(replyToken, throwable.getMessage());
                                     return;
                                 }
-                                Pemain pem = new Pemain("ggwp","ggwp");
-                                List<Pemain> daftarPemain = new ArrayList<Pemain>();
-                                daftarPemain.add(pem);
+                              //  Pemain pem = new Pemain("ggwp","ggwp");
+                              //  List<Pemain> daftarPemain = new ArrayList<Pemain>();
+                              //  daftarPemain.add(pem);
 
                                 this.reply(
                                         replyToken,
