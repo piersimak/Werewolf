@@ -74,6 +74,7 @@ import com.linecorp.bot.model.message.imagemap.URIImagemapAction;
 import com.linecorp.bot.model.response.BotApiResponse;
 import com.linecorp.bot.spring.boot.annotation.EventMapping;
 import com.linecorp.bot.spring.boot.annotation.LineMessageHandler;
+import com.example.bot.spring.DaftarPemain;
 
 import lombok.NonNull;
 import lombok.Value;
@@ -424,7 +425,7 @@ public class KitchenSinkController {
                                 }
 
                                 DaftarPemain.daftarPemain.add(new Pemain("ggwp","ggwp"));
-                                
+
                                 this.reply(
                                         replyToken,
                                         Arrays.asList(new TextMessage(
