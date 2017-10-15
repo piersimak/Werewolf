@@ -390,7 +390,7 @@ public class KitchenSinkController {
                                 new MessageAction("Daftarperan",
                                                   "/roles"),
                                 new MessageAction("Pemain",
-                                                  "/players")
+                                                  "/pemain")
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("Menu", buttonsTemplate);
                 this.reply(replyToken, templateMessage);
@@ -423,6 +423,8 @@ public class KitchenSinkController {
                                     return;
                                 }
 
+                                DaftarPemain.daftarPemain.add(new Pemain("ggwp","ggwp"));
+                                
                                 this.reply(
                                         replyToken,
                                         Arrays.asList(new TextMessage(

@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\sample-spring-boot-kitchensink",
+    "\\sample-spring-boot-kitchensink\\src",
+    "\\sample-spring-boot-kitchensink\\src\\main",
+    "\\sample-spring-boot-kitchensink\\src\\main\\java",
+    "\\sample-spring-boot-kitchensink\\src\\main\\java\\com",
+    "\\sample-spring-boot-kitchensink\\src\\main\\java\\com\\example",
+    "\\sample-spring-boot-kitchensink\\src\\main\\java\\com\\example\\bot",
+    "\\sample-spring-boot-kitchensink\\src\\main\\java\\com\\example\\bot\\spring"
+  ],
+  "SelectedNode": "\\sample-spring-boot-kitchensink\\src\\main\\java\\com\\example\\bot\\spring\\KitchenSinkController.java",
+  "PreviewInSolutionExplorer": false
+}
