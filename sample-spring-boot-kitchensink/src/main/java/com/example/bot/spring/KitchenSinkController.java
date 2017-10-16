@@ -419,6 +419,8 @@ public class KitchenSinkController {
                 String gg= "asdasd-dasdad";
                 String[] ggasd = gg.split("-");
 
+                List list122 = new ArrayList<String>(Arrays.asList(ggasd));
+
                 String userId = event.getSource().getUserId();
                 if (userId != null) {
                     lineMessagingClient
