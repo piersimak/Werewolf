@@ -417,7 +417,6 @@ public class KitchenSinkController {
             case "/join": {
 
 
-                List<String> ggwp = new ArrayList<String>();
 
 
                 String userId = event.getSource().getUserId();
