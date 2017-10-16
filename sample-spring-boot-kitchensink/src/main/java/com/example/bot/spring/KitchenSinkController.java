@@ -416,8 +416,8 @@ public class KitchenSinkController {
             }
             case "/join": {
 
-                String gg= "asdasd-dasdad";
-                String[] ggasd = gg.split("-");
+
+                List<String> ggwp = new ArrayList<String>();
 
 
                 String userId = event.getSource().getUserId();
