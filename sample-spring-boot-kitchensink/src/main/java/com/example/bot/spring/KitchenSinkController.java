@@ -400,9 +400,7 @@ public class KitchenSinkController {
             //RESPON Menu
             case "/creategame": {
 
-                String gg= "asdasd-dasdad";
-                String[] ggasd = gg.split("-");
-                String mantaf = ggasd[0];
+
                 String imageUrl = createUri("/static/buttons/1040.jpg");
                 ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
                         null,
@@ -417,6 +415,9 @@ public class KitchenSinkController {
                 break;
             }
             case "/join": {
+
+                String gg= "asdasd-dasdad";
+                String[] ggasd = gg.split("-");
 
                 String userId = event.getSource().getUserId();
                 if (userId != null) {
